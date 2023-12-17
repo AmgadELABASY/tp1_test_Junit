@@ -1,8 +1,13 @@
 
+
 import org.junit.jupiter.api.Assertions;
 import fr.einfolearning.tp2.metiers.TextBuffer;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
+
+import org.junit.jupiter.api.BeforeEach; // Modifier cette ligne
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.CoreMatchers.is;
 
 public class TextBufferTest {
     private TextBuffer textBuffer;
@@ -23,5 +28,13 @@ public class TextBufferTest {
         Assertions.assertEquals(expectedString,string);
     }
 
-
+    @Test
+    public void should_return_the_length_of_textBuffer(){
+        //ARRANGE
+        int expectedValue = "Ceci est un test de la méthode toString".length();
+        //ACT
+        int max = textBuffer.maxP();
+        //ASSERT
+        assertThat(max,is(expectedValue));
+    }
 }
