@@ -6,9 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class TextBufferTest {
     private TextBuffer textBuffer;
-
     @BeforeEach
     public void init(){
+        System.out.println("Appel avant chaque méthode");
         textBuffer = new TextBuffer("Ceci est un test de la méthode toString");
     }
 
@@ -16,6 +16,7 @@ public class TextBufferTest {
     public void should_return_string_when_create_textbuffer_with_string_content(){
         //ARRANGE
         String expectedString = "Ceci est un test de la méthode toString";
+        TextBuffer textBuffer = new TextBuffer("Ceci est un test de la méthode toString");
 
         //ACT
         String string = textBuffer.toString();
