@@ -16,12 +16,7 @@ public class TextBufferTest {
     private static Instant startedAt;
     private TextBuffer textBuffer;
     @BeforeEach
-<<<<<<< HEAD
-    public void init(){
-        System.out.println("Appel avant chaque méthode");
-=======
     public void initTextBuffer(){
->>>>>>> step3_couverture_tests
         textBuffer = new TextBuffer("Ceci est un test de la méthode toString");
     }
 
